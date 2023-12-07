@@ -5,6 +5,11 @@
     @include center-flex;
     position: relative;
     margin: 50px;
+    @media (max-width: $breakpoint-tab){
+        margin:25px;
+        
+    }
+
 
         &_img {
             object-fit: cover;
@@ -14,6 +19,7 @@
             @include full-width;
             @media (max-width: $breakpoint-tab){
                 height: 120px;
+                
             }
         }
                 &_txt {

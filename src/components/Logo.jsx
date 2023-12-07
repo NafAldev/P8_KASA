@@ -2,6 +2,7 @@ import React from 'react';
 import logoInHeader from "../images/logo.svg";
 import logoInFooter from "../images/LogoFooter.svg";
 import { Link } from 'react-router-dom';
+import "../style/Logo.scss";
 
 function LogoAll({ isInHeader }) {
   const logoSource = isInHeader ? logoInHeader : logoInFooter;

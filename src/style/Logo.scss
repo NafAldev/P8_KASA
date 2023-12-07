@@ -1,0 +1,7 @@
+@import "./utils/variables.scss";
+
+@media (max-width: $breakpoint-L) {
+    .logo{
+        width: 111px;
+    }
+   }

@@ -20,7 +20,7 @@
 
     &_gradient{
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-        @include full-width
+        @include full-width;
         height: 100%;
         @include card-radius;
         position: relative;
@@ -34,13 +34,13 @@
   
     &_title {
       position: absolute;
-      @include center-flex
+      @include center-flex;
       flex-direction: column;
       align-items: flex-start;
       color:$secondary-color;
       font-size: 18px;
       font-weight: 600;
-      @include position-title-card
+      @include position-title-card;
 
       @media (max-width: $breakpoint-L) {
        font-size: 12px; 

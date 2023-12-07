@@ -5,11 +5,18 @@
     @include flexLayout;
     height: 68px;
     margin:50px;
-
+    @media (max-width: $breakpoint-tab){
+        margin:25px;
+        
+    }
     &_navbar{
         @include flexLayout;
         gap: 57px;
         height: 34px;
+        @media (max-width: $breakpoint-tab){
+            gap: 10px;
+        
+        }
     }
         &_homepage_link {
             color: $primary-color;
