@@ -1,0 +1,9 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.footer {
+    @include center-flex;
+    flex-direction: column;
+    background-color: $tertiary-color;
+    height: 209px;
+}

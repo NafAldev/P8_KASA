@@ -1,0 +1,33 @@
+@mixin flexLayout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin full-width {
+    width: 100%;
+}
+
+@mixin card-size {
+    width: 340px;
+    height: 340px;
+}
+
+@mixin card-radius {
+    border-radius: 10px;
+}
+
+@mixin position-title-card{
+    left: 6%;
+    right: 6%;
+    top: 80%;
+    bottom: 6%;
+}
+  
+  

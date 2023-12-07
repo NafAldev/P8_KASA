@@ -1,0 +1,31 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.banner {
+    @include center-flex;
+    position: relative;
+    margin: 50px;
+
+        &_img {
+            object-fit: cover;
+            border-radius: 10px;
+            filter: brightness(0.65);
+            height: 180px;
+            @include full-width;
+            @media (max-width: $breakpoint-tab){
+                height: 120px;
+            }
+        }
+                &_txt {
+                    color: $secondary-color;
+                    font-size: 48px;
+                    z-index: 2;
+                    position: absolute;
+                    text-align: center;
+                    @media (max-width: $breakpoint-tab){
+                        font-size: 24px;
+                    }
+            
+                }
+}
+  

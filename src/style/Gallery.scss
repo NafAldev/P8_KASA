@@ -1,0 +1,11 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.gallery{
+    @include center-flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-top: 50px;
+    background: $gallery-background-color;
+    border-radius: 25px;
+}

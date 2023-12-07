@@ -1,0 +1,50 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.card {
+    @include card-size;
+    margin-bottom: 16px;
+    position: relative;
+    @media (max-width: $breakpoint-L) {
+        @include full-width;
+        height: 250px;
+    }
+  
+    &_cover {
+      position: relative;
+      @include full-width;
+      height: 100%;
+      object-fit: cover;
+      @include card-radius;
+    }
+
+    &_gradient{
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+        @include full-width
+        height: 100%;
+        @include card-radius;
+        position: relative;
+        bottom: 345px;
+
+        @media (max-width: $breakpoint-L) {
+            bottom: 254px;
+        
+        }
+    }
+  
+    &_title {
+      position: absolute;
+      @include center-flex
+      flex-direction: column;
+      align-items: flex-start;
+      color:$secondary-color;
+      font-size: 18px;
+      font-weight: 600;
+      @include position-title-card
+
+      @media (max-width: $breakpoint-L) {
+       font-size: 12px; 
+      }
+    }
+  }
+  
