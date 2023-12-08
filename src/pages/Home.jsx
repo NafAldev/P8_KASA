@@ -4,7 +4,7 @@ import Gallery from '../components/Gallery';
 import Bannerpic from '../images/bannière-homepage.svg';
 
 
-const Home = () => {
+function Home () {
   const bannerData = {
     image: Bannerpic,
     text: 'Chez vous, partout et ailleurs',
