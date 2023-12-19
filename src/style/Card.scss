@@ -6,8 +6,9 @@
     margin-bottom: 16px;
     position: relative;
     @media (max-width: $breakpoint-L) {
-        @include full-width;
-        height: 250px;
+      width: 335px;
+      height: 255px;
+      margin: 0;
     }
   
     &_cover {
@@ -24,10 +25,10 @@
         height: 100%;
         @include card-radius;
         position: relative;
-        bottom: 345px;
+        bottom: 344px;
 
         @media (max-width: $breakpoint-L) {
-            bottom: 254px;
+            bottom: 259px;
         
         }
     }
@@ -45,6 +46,7 @@
       @media (max-width: $breakpoint-L) {
        font-size: 12px; 
       }
+      
     }
   }
   

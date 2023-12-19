@@ -5,13 +5,13 @@ import Bannerpic from '../images/bannière-homepage.svg';
 
 
 function Home () {
-  const bannerData = {
+  const bannerProps = {
     image: Bannerpic,
     text: 'Chez vous, partout et ailleurs',
   }
   return (
     <div>
-        <Banner {...bannerData}/>
+        <Banner {...bannerProps}/>
         <Gallery/>
     </div>
   )

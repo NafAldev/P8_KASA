@@ -1,33 +1,72 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
 
-.collapse{
-    margin-top: 40px;
-
-    @media (max-width: $breakpoint-tab){
-        margin:25px;
-        
+.collapse {
+    @include full-width;
+    margin-bottom: 20px;
+    @media (max-width: $breakpoint-tab) {
+        margin: 0;
     }
-    &_header{
-        display: flex;
+
+    &_header {
         @include flexLayout;
         background-color: $primary-color;
-        color: $secondary-color; 
-        margin: 20px 30px;
+        color: $secondary-color;
+        margin: 20px 50px 0 50px;
         border-radius: 5px;
-        height: 35px;
         padding: 0 10px;
-        @media (max-width: $breakpoint-tab){
-            margin: 0;
+        height: 35px;
+
+        @media (max-width: $breakpoint-tab) {
+            margin: 10px;
         }
     }
 
-    &_content{
-        margin: 20px 30px;
+    &_content {
+        margin: 0px 50px 20px 50px;
         color: $primary-color;
-        background-color: $secondary-color;
-        font-size: 14px;
-        padding: 0 10px;
+        background-color: $gallery-background-color;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform-origin: top; 
+        
+        @media (max-width: $breakpoint-tab) {
+            margin: 10px;
+        }
+        &.show{
+            animation: expandCollapse 0.4s ease-in-out forwards;
+        }
+
+        &.hidden{
+            animation: reduceCollapse 0.2s ease-in-out forwards;
+            
+        }
+    }
+}
+
+
+@keyframes expandCollapse {
+    0% {
+        transform: scaleY(0); 
     }
 
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes reduceCollapse{
+    0% {
+        transform: scaleY(1);
+        max-height: 0px;
+    }
+
+    100% {
+        transform: scaleY(0);
+        max-height: 0;
+    }
 }
