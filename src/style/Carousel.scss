@@ -5,45 +5,52 @@
   display: flex;
   position: relative;
   margin: 50px;
-  @media (max-width: $breakpoint-tab) {
+
+  @media (max-width:$breakpoint-tab) {
     margin: 10px; 
-}
-  
-    &_arrow_button{
-      color: $secondary-color;
-      font-size: 65px;
+  }
+
+  &_arrow_button {
+    color: $secondary-color;
+    font-size: 65px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    &.right {
+      right: 0;
+    }
+
+    &.left {
+      left: 0;
+    }
+  }
+
+  &_slide {
+    @include full-width;
+
+    img {
+      @include full-width; 
+      height: 415px;
+      object-fit: cover;
+      @include card-radius;
+
+      @media (max-width:$breakpoint-tab) {
+        height: 255px;
+      }
+    }
+
+    .carousel_numerotation {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      background-color: transparent;
-      border: none;
-  
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
     }
-
-    &_slide{
-      @include full-width;
-      img {
-        @include full-width; 
-        height: 415px;
-        object-fit: cover;
-        @include card-radius;
-        
-        @media (max-width: $breakpoint-tab) {
-          height: 255px;
-
-      }
-
-      }
-    }
-
-
-}
-
-.right{
-  right: 0;
-}
-
-.left{
-  left: 0;
+  }
 }

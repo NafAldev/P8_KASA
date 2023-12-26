@@ -10,12 +10,12 @@
     @media (max-width: $breakpoint-tab) {
         @include full-width;
         justify-content: flex-start;
+        font-size: 14px;
+        gap: 5px;
     }
 }
-
-
-  
-.empty-star {
-    color: #ccc;
+ 
+.empty_star {
+    color: $emptystar-color;
 }
   

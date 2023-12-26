@@ -7,7 +7,8 @@ import logements from "../data/logements.json";
 function Gallery() {
   return (
     <div className='gallery'>
-      {logements.map((logement, index) => (
+       {/* Mapping à travers les logements et afficher grâce à Card */}
+      {logements.map((logement) => (
         <Card key={logement.id} logement={logement} />
       ))}
   </div>

@@ -1,26 +1,26 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import "../style/Rating.scss";
 
 function StarRating({ rating }) {
   const renderStars = () => {
+    // Tableau pour stocker les étoiles
     const stars = [];
+
+    // Nombre d'étoiles pleines
     const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
 
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
-    }
 
-    if (hasHalfStar) {
-      stars.push(<FontAwesomeIcon key={fullStars} icon={faStarHalf} />);
-    }
-
-    // Ajouter des étoiles vides pour compléter jusqu'à 5 étoiles
-    const remainingStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-    for (let i = 0; i < remainingStars; i++) {
-      stars.push(<FontAwesomeIcon key={`empty-${i}`} icon={faStar} className="empty-star" />);
+    // Boucle pour generer les étoiles 
+    for (let i = 0; i < 5; i++) {
+      if (i < fullStars) {
+        // Ajouter une étoile 
+        stars.push(<FontAwesomeIcon key={i} icon={faStar} />);
+      } else {
+        // Ajouter une étoile vide pour compléter jusqu'à 5 étoiles
+        stars.push(<FontAwesomeIcon key={`empty-${i}`} icon={faStar} className="empty_star" />);
+      }
     }
 
     return stars;

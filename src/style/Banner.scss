@@ -13,8 +13,9 @@
 
         &_img {
             object-fit: cover;
-            border-radius: 10px;
+            @include card-radius;
             filter: brightness(0.65);
+            background-repeat: no-repeat;
             height: 180px;
             @include full-width;
             @media (max-width: $breakpoint-tab){

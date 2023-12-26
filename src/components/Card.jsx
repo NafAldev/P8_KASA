@@ -2,8 +2,10 @@ import React from 'react';
 import "../style/Card.scss";
 import { Link } from 'react-router-dom';
 
-const Card = ({ logement }) => {
+function Card ({ logement }) {
+
   const { id,title, cover } = logement;
+  
   return (
     <Link to ={`/lodging/${id}`} >
     <figure className='card'>

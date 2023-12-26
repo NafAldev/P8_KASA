@@ -1,0 +1,41 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.primary_txt {
+    color: $primary-color;
+}
+
+
+.profil {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: $breakpoint-tab) {
+      margin-left: auto;
+    }
+  
+
+  &_name {
+    font-size: 18px;
+    text-align: right;
+    font-weight: 600;
+
+    @media (max-width: $breakpoint-tab) {
+      font-size: 15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+    &_pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    @media (max-width: $breakpoint-tab) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

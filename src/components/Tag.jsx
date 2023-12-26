@@ -1,16 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import dataLodging from '../data/logements.json';
+import { useParams } from 'react-router-dom';
+import "../style/Tag.scss";
 
-function Tag({ label }) {
+function Tag() {
+    const { id } = useParams();
+
+    const selectedLogement = dataLodging.find((logement) => logement.id === id);
+    
   return (
-    <div className="tag">
-      <span>{label}</span>
-    </div>
-  );
-}
+      <div className="tag">
+        {selectedLogement.tags.map((tag) => (
+          <span className="tag_name"key={tag}>{tag} </span>
+        ))}
+      </div>
 
-Tag.propTypes = {
-  label: PropTypes.string.isRequired,
-};
+  )
+}
 
 export default Tag;

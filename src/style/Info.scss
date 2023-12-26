@@ -1,0 +1,41 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+.primary_txt {
+    color: $primary-color;
+}
+  
+.paddingContent{
+    padding: 10px;
+}
+  
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media (max-width: $breakpoint-tab) {
+      @include full-width;
+    }
+  
+
+    &_title {
+        font-size: 36px;
+        margin: 0;
+
+        @media (max-width: $breakpoint-tab) {
+        font-size: 18px;
+        }
+    }
+
+    &_location {
+        font-size: 18px;
+        font-weight: 600;
+
+        @media (max-width: $breakpoint-tab) {
+        font-size: 12px;
+        font-weight: 600;
+        }
+    }
+}

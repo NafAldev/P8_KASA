@@ -1,11 +1,14 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
 
+
+
+
 .collapse {
     @include full-width;
     margin-bottom: 20px;
     @media (max-width: $breakpoint-tab) {
-        margin: 0;
+        margin :0;
     }
 
     &_header {
@@ -16,9 +19,19 @@
         border-radius: 5px;
         padding: 0 10px;
         height: 35px;
-
         @media (max-width: $breakpoint-tab) {
-            margin: 10px;
+            margin: 0 10px;
+        }
+        .arrow {
+            transition: transform 0.5s ease;
+        }
+    
+        &.open .arrow {
+            transform: rotate(-90deg);
+        }
+    
+        &.closed .arrow {
+            transform: rotate(0deg);
         }
     }
 
@@ -28,45 +41,72 @@
         background-color: $gallery-background-color;
         font-size: 16px;
         font-weight: 600;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        @include vertical-centered;
         transform-origin: top; 
-        
+        @include card-radius;
         @media (max-width: $breakpoint-tab) {
-            margin: 10px;
-        }
-        &.show{
-            animation: expandCollapse 0.4s ease-in-out forwards;
+            margin: 0 10px 10px;
+            
         }
 
-        &.hidden{
-            animation: reduceCollapse 0.2s ease-in-out forwards;
+        &.show {
+            animation: expand 0.4s ease-in-out;
+            
+        }
+
+        &.hidden {
+            animation: reduce 0.4s ease-in-out ;
             
         }
     }
+
 }
 
 
-@keyframes expandCollapse {
+@keyframes expand {
     0% {
         transform: scaleY(0); 
+        opacity: 0;
+
     }
 
     100% {
         transform: scaleY(1);
+        opacity: 1;
     }
 }
 
-@keyframes reduceCollapse{
+@keyframes reduce{
     0% {
         transform: scaleY(1);
-        max-height: 0px;
+        opacity: 1;
+      
     }
 
     100% {
         transform: scaleY(0);
-        max-height: 0;
+        opacity: 0;
+       
+
+        
     }
 }
+
+
+/* class pour gérer l'affichage et la responsivité */
+
+.collapse_lodging{
+    display: flex;
+    @include full-width;
+    @media (max-width: $breakpoint-tab) {
+        flex-direction: column;
+        margin: 0;
+    }
+    
+}
+
+.collapse_detailsEquipements{
+    display: flex;
+    flex-direction: column;
+}
+

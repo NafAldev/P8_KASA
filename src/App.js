@@ -13,7 +13,7 @@ import "../src/style/utils/reset.scss";
 function App() {
   return (
     <BrowserRouter>
-      <div id='container'>
+      <div>
           <Header/>
           
           <Routes>

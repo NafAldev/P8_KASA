@@ -35,9 +35,6 @@
   
     &_title {
       position: absolute;
-      @include center-flex;
-      flex-direction: column;
-      align-items: flex-start;
       color:$secondary-color;
       font-size: 18px;
       font-weight: 600;

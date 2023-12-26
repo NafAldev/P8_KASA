@@ -1,0 +1,29 @@
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+
+.lodging {
+  @include flexLayout;
+  margin: 20px 50px;
+
+  @media (max-width: $breakpoint-tab) {
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: flex-end;
+  }
+  
+  &_profil {
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    @media (max-width: $breakpoint-tab) {
+      @include full-width;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

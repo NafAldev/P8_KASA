@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../components/Banner';
 import Gallery from '../components/Gallery';
-import Bannerpic from '../images/bannière-homepage.svg';
+import Bannerpic from '../images/banniere-Homepage.jpg';
 
 
 function Home () {

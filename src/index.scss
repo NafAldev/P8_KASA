@@ -1,9 +1,25 @@
-
-
-/* Import global styles */
 @import "./style/utils/variables.scss";
 @import "./style/utils/reset.scss";
 @import "./style/utils/mixins.scss";
+
+
+@import "./style/Header.scss";
+@import "./style/Footer.scss";
+
+@import "./style/Banner.scss";
+@import "./style/Card.scss";
+@import "./style/Carousel.scss";
+@import "./style/Collapse.scss";
+@import "./style/Credit.scss";
+@import "./style/Error.scss";
+@import "./style/Gallery.scss";
+@import "./style/Logo.scss";
+@import "./style/Rating.scss";
+@import "./style/Info.scss";
+@import "./style/Tag.scss";
+@import "./style/Profil.scss";
+@import "./style/DescriptionLodging.scss";
+
 
 
 
